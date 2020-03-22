@@ -1,0 +1,21 @@
+type Query {
+    getUser(id: String): User!
+    mostSearched(limit: Int): [User!]
+    setLogLevel(level: String): Status
+}
+
+type Mutation {
+    resetUsers: Status
+}
+
+type User {
+    username: String
+    email: String
+    searchedForCounter: Int
+    followers: Int
+    followed: Int
+},
+
+type Status {
+    status: String
+}
